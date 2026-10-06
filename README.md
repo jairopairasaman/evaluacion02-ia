@@ -1,13 +1,32 @@
 # Evaluación 02: Prompts con IA y Documentación Técnica
 
+![ChatGPT](https://img.shields.io/badge/ChatGPT-4o-green?logo=openai)
+![Claude](https://img.shields.io/badge/Claude-3.5_Sonnet-orange?logo=anthropic)
+![Gemini](https://img.shields.io/badge/Gemini-1.5_Pro-blue?logo=google)
+![Estado](https://img.shields.io/badge/Estado-Completado-success)
+
+Documentación técnica sobre ingeniería de prompts, evaluación de costos de modelos LLM y comparación de respuestas utilizando ChatGPT, Claude y Gemini.
+
+---
+
 ## 📋 Tabla de Contenidos
 - [Checklist de Entregables](#-checklist-de-entregables)
-- [Pregunta 1: Análisis de Reseñas (RutaFácil)](#1-análisis-de-reseñas-rutafácil)
-- [Pregunta 2: Evaluación Económica de Chatbot (EduTech)](#2-evaluación-económica-de-chatbot-edutech)
-- [Pregunta 3: Extracción de Datos a JSON](#3-extracción-de-datos-a-json)
-- [Flujo de Trabajo](#4-flujo-de-trabajo)
-- [Tabla Comparativa de Modelos de IA](#5-tabla-comparativa-de-modelos-de-ia)
-- [Conclusión](#6-conclusión)
+- [Pregunta 1: Anatomía de un prompt efectivo (ChatGPT)](#pregunta-1-anatomía-de-un-prompt-efectivo-chatgpt)
+- [Pregunta 2: Evaluación Económica de Chatbot (Claude)](#pregunta-2-evaluación-económica-de-chatbot-claude)
+- [Pregunta 3: Extracción de Datos a JSON (Gemini)](#pregunta-3-extracción-de-datos-a-json-gemini)
+- [Pregunta 4: Flujo de Trabajo](#pregunta-4-flujo-de-trabajo)
+- [Tabla Comparativa de Modelos de IA](#tabla-comparativa-de-modelos-de-ia)
+- [Conclusión](#conclusión)
+
+---
+
+## 📝 Checklist de Entregables
+- [x] **Pregunta 1:** Análisis de caso, prompt vago vs. estructurado y conteo verificado en ChatGPT.
+- [x] **Pregunta 2:** Cálculo manual de presupuesto, prompt XML con CoT y autocrítica en Claude.
+- [x] **Pregunta 3:** Esquema JSON, prompt zero-shot vs. few-shot y validación de sintaxis en Gemini.
+- [x] **Pregunta 4:** Documentación en GitHub Flavored Markdown, badges, tabla de contenidos, imágenes y diagrama Mermaid.
+
+---
 
 ## Pregunta 1: Anatomía de un prompt efectivo (ChatGPT)
 
@@ -25,8 +44,6 @@
 **Prompt Inicial (Vago):**
 ```text
 Resume estas reseñas
-
-prompt estrcuturado
 
 Actúa como un líder de producto de software. 
 
@@ -47,33 +64,31 @@ Entrégame la respuesta únicamente con la siguiente estructura:
 
 Restricción: Si una reseña menciona dos problemas (como la reseña 7), clasifica ambos temas en sus respectivas categorías correspondientes.
 
-
-Prompt directo
-
 Calcula el costo mensual de 120,000 consultas a $3 por millón de entrada (1200 tokens) y $15 por millón de salida (300 tokens). Dame solo los montos finales.
 
-promt hecho
-
-contexto:
+<contexto>
 Trabajas como analista financiero de TI en la empresa EduTech. Estamos evaluando la viabilidad económica de lanzar un chatbot de soporte para estudiantes.
+</contexto>
 
-datos:
+<datos>
 - Presupuesto máximo aprobado: US$ 900 mensuales.
 - Volumen estimado: 4,000 consultas por día durante 30 días (120,000 consultas en total).
 - Escenario Actual: 1,200 tokens de entrada y 300 tokens de salida por consulta.
 - Escenario Optimizado: 700 tokens de entrada y 300 tokens de salida por consulta.
 - Precios API: US$ 3.00 / 1M tokens de entrada y US$ 15.00 / 1M tokens de salida.
+</datos>
 
-tarea:
+<tarea>
 Calcula el costo total mensual de ambos escenarios, el ahorro mensual en dólares y porcentaje, e indica si cada escenario cumple el presupuesto.
+</tarea>
 
-instrucción autocritica:
+<instruccion_autocritica>
 Antes de generar la respuesta final, revisa minuciosamente todas las multiplicaciones y sumas para garantizar exactitud matemática.
+</instruccion_autocritica>
 
-formato:
+<formato>
 Escribe tu proceso dentro de <razonamiento></razonamiento> y la respuesta final dentro de <respuesta></respuesta>.
-
-prompts utilizados
+</formato>
 
 Convierte estos 3 correos de postulantes a un objeto JSON según los campos: nombre, puesto, anios_experiencia, tecnologias, disponibilidad y pretension_soles.
 
@@ -121,10 +136,7 @@ JSON:
   "pretension_soles": 5000
 }
 
-Procesa los siguientes datos:
-[Pega los 3 correos de la evaluación]
-
-  graph TD
+graph TD
     A[Análisis del Caso de Negocio] --> B[Diseño del Prompt Inicial / Vago]
     B --> C[Ejecución en Modelo de IA]
     C --> D[Verificación Manual de Resultados]
@@ -133,18 +145,6 @@ Procesa los siguientes datos:
     F --> C
     E -- Sí --> G[Documentación Final en GitHub]
 
-## 📝 Checklist de Entregables
-- [x] **Pregunta 1:** Análisis de caso, prompt vago vs. estructurado y conteo verificado en ChatGPT.
-- [x] **Pregunta 2:** Cálculo manual de presupuesto, prompt XML con CoT y autocrítica en Claude.
-- [x] **Pregunta 3:** Esquema JSON, prompt zero-shot vs. few-shot y validación de sintaxis en Gemini.
-- [x] **Pregunta 4:** Documentación en GitHub Flavored Markdown, badges, tabla de contenidos, imágenes y diagrama Mermaid.
-
-Criterio,ChatGPT,Claude,IA libre: Gemini
-Calidad de la respuesta (1-5),5,5,4
-Precisión (aciertos / total verificado),8/8 (100%),4/4 (100%),3/3 (100%)
-Precio del plan o de la API (US$),US$ 20/mes (API: $2.50/1M),US$ 20/mes (API: $3.00/1M),Gratuito (API: $0.35/1M)
-N.° de prompts hasta un resultado útil,2,2,2
-Tokens aproximados y costo estimado,"~1,500 tokens ($0.00375)","~1,200 tokens ($0.0036)","~1,000 tokens ($0.00)"
 ```
 
 ###
