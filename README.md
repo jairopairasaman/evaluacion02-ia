@@ -1,12 +1,13 @@
 # Evaluación 02: Prompts con IA y Documentación Técnica
 
-## Tabla de Contenidos
-1. [Pregunta 1: Anatomía de un prompt efectivo (ChatGPT)](#pregunta-1-anatomía-de-un-prompt-efectivo-chatgpt)
-2. [Pregunta 2: Razonamiento paso a paso y costos de IA (Claude)](#pregunta-2-razonamiento-paso-a-paso-y-costos-de-ia-claude)
-3. [Pregunta 3: Extracción estructurada con few-shot (Gemini)](#pregunta-3-extracción-estructurada-con-few-shot-gemini)
-4. [Diagrama del Flujo de Trabajo](#diagrama-del-flujo-de-trabajo)
-5. [Checklist de Entregables](#checklist-de-entregables)
-6. [Tabla Comparativa y Conclusión](#tabla-comparativa-y-conclusión)
+## 📋 Tabla de Contenidos
+- [Checklist de Entregables](#-checklist-de-entregables)
+- [Pregunta 1: Análisis de Reseñas (RutaFácil)](#1-análisis-de-reseñas-rutafácil)
+- [Pregunta 2: Evaluación Económica de Chatbot (EduTech)](#2-evaluación-económica-de-chatbot-edutech)
+- [Pregunta 3: Extracción de Datos a JSON](#3-extracción-de-datos-a-json)
+- [Flujo de Trabajo](#4-flujo-de-trabajo)
+- [Tabla Comparativa de Modelos de IA](#5-tabla-comparativa-de-modelos-de-ia)
+- [Conclusión](#6-conclusión)
 
 ## Pregunta 1: Anatomía de un prompt efectivo (ChatGPT)
 
@@ -132,14 +133,11 @@ Procesa los siguientes datos:
     F --> C
     E -- Sí --> G[Documentación Final en GitHub]
 
-Checklist de Entregables
-Pregunta 1: Análisis de caso, prompt vago vs estructurado y conteo verificado en ChatGPT.
-
-Pregunta 2: Cálculo manual de presupuesto, prompt XML con CoT y autocrítica en Claude.
-
-Pregunta 3: Esquema JSON, prompt zero-shot vs few-shot y validación de sintaxis en Gemini.
-
-Pregunta 4: Documentación en GitHub Flavored Markdown, badges, tabla de contenidos, imágenes y diagrama Mermaid.
+## 📝 Checklist de Entregables
+- [x] **Pregunta 1:** Análisis de caso, prompt vago vs. estructurado y conteo verificado en ChatGPT.
+- [x] **Pregunta 2:** Cálculo manual de presupuesto, prompt XML con CoT y autocrítica en Claude.
+- [x] **Pregunta 3:** Esquema JSON, prompt zero-shot vs. few-shot y validación de sintaxis en Gemini.
+- [x] **Pregunta 4:** Documentación en GitHub Flavored Markdown, badges, tabla de contenidos, imágenes y diagrama Mermaid.
 
 Criterio,ChatGPT,Claude,IA libre: Gemini
 Calidad de la respuesta (1-5),5,5,4
@@ -157,3 +155,6 @@ Tokens aproximados y costo estimado,"~1,500 tokens ($0.00375)","~1,200 tokens ($
 | Precio del plan o de la API (US$) | US$ 20/mes (API: $2.50/1M) | US$ 20/mes (API: $3.00/1M) | Gratuito (API: $0.35/1M) |
 | N.° de prompts hasta un resultado útil | 2 | 2 | 2 |
 | Tokens aproximados y costo estimado | ~1,500 tokens ($0.00375) | ~1,200 tokens ($0.0036) | ~1,000 tokens ($0.00) |###
+
+6. Conclusión
+El uso de prompts bien estructurados, restricciones claras y ejemplos incrementa significativamente la precisión de las respuestas generadas por los modelos de lenguaje tanto ChatGPT como Claude demostraron un desempeño sobresaliente en tareas complejas de razonamiento y formato estructurado, mientras que Gemini se posiciona como una opción altamente competitiva y efectiva para tareas cotidianas y análisis rápidos.
