@@ -147,11 +147,13 @@ Precisión (aciertos / total verificado),8/8 (100%),4/4 (100%),3/3 (100%)
 Precio del plan o de la API (US$),US$ 20/mes (API: $2.50/1M),US$ 20/mes (API: $3.00/1M),Gratuito (API: $0.35/1M)
 N.° de prompts hasta un resultado útil,2,2,2
 Tokens aproximados y costo estimado,"~1,500 tokens ($0.00375)","~1,200 tokens ($0.0036)","~1,000 tokens ($0.00)"
+```
 
+###
 | Criterio | ChatGPT | Claude | IA libre: Gemini |
 | --- | :---: | :---: | :---: |
 | Calidad de la respuesta (1-5) | 5 | 5 | 4 |
 | Precisión (aciertos / total verificado) | 8/8 (100%) | 4/4 (100%) | 3/3 (100%) |
 | Precio del plan o de la API (US$) | US$ 20/mes (API: $2.50/1M) | US$ 20/mes (API: $3.00/1M) | Gratuito (API: $0.35/1M) |
 | N.° de prompts hasta un resultado útil | 2 | 2 | 2 |
-| Tokens aproximados y costo estimado | ~1,500 tokens ($0.00375) | ~1,200 tokens ($0.0036) | ~1,000 tokens ($0.00) |
+| Tokens aproximados y costo estimado | ~1,500 tokens ($0.00375) | ~1,200 tokens ($0.0036) | ~1,000 tokens ($0.00) |###
